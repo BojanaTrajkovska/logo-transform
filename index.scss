@@ -1,0 +1,11 @@
+@import "logo";
+
+body {
+  .content {
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}
