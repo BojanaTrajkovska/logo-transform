@@ -92,16 +92,16 @@ $logoItemWidth: 500px;
 
 @keyframes spin {
   0% {
-    transform: rotateZ(0deg) scale3d(0.2, 0.2, 0.2);
+    transform: translateZ(-100px) rotateY(0deg) rotateZ(0deg) scale3d(0.3, 0.3, 0.3);
   }
-  //60% {
-  //  transform: rotateZ(630deg) scale3d(0.2, 0.2, 0.2);
-  //}
-  //80% {
-  //  transform: rotateZ(630deg) scale3d(0.2, 0.2, 0.2);
-  //}
+  60% {
+    transform: translateZ(-100px) rotateY(0deg) rotateZ(630deg) scale3d(0.3, 0.3, 0.3);
+  }
+  80% {
+    transform: translateZ(-100px) rotateY(-90deg) rotateZ(630deg) scale3d(0.3, 0.3, 0.3);
+  }
   100% {
-    transform: rotateY(-90deg) rotateZ(630deg) scale3d(0.2, 0.2, 0.2);
+    transform: translateZ(-100px) rotateY(-90deg) rotateZ(630deg) scale3d(1, 1, 1);
   }
 }
 
