@@ -1,6 +1,8 @@
 @import "logo";
 
 body {
+  margin: 0;
+  padding: 0;
   .content {
     backface-visibility: hidden;
     display: flex;

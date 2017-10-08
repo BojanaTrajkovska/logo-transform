@@ -1,7 +1,7 @@
 $logoItemWidth: 500px;
 
 .logo {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   position: relative;
   backface-visibility: hidden;
@@ -18,7 +18,7 @@ $logoItemWidth: 500px;
     top: 50%;
     transform-origin: 50% 0;
     transform-style: preserve-3d;
-    background: #ccd2fc;
+
     .logo-item-triangle {
       width: 0;
       height: 0;
@@ -86,7 +86,7 @@ $logoItemWidth: 500px;
     transform: translateX(-50%) rotateZ(315deg);
   }
   &.logo-spin {
-    animation: spin 12s forwards;
+    animation: spin 6s forwards;
   }
 }
 
@@ -94,11 +94,14 @@ $logoItemWidth: 500px;
   0% {
     transform: rotateZ(0deg) scale3d(0.2, 0.2, 0.2);
   }
-  80% {
-    transform: rotateZ(630deg) scale3d(0.2, 0.2, 0.2);
-  }
+  //60% {
+  //  transform: rotateZ(630deg) scale3d(0.2, 0.2, 0.2);
+  //}
+  //80% {
+  //  transform: rotateZ(630deg) scale3d(0.2, 0.2, 0.2);
+  //}
   100% {
-    transform: rotateY(-85deg) rotateZ(630deg) scale3d(1, 1, 1) translateZ(400px);
+    transform: rotateY(-90deg) rotateZ(630deg) scale3d(0.2, 0.2, 0.2);
   }
 }
 
