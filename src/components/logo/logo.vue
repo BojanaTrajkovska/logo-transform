@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<template>
     <div class="content">
         <div class="logo logo-spin">
             <div class="logo-item">
@@ -86,5 +80,12 @@
         </div>
 
     </div>
-</body>
-</html>
+</template>
+<script>
+    export default {
+
+    }
+</script>
+<style lang="scss">
+    @import "logo";
+</style>

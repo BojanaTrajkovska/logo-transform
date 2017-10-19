@@ -1,0 +1,27 @@
+.slider{
+  .slide {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+    opacity: 0;
+    transition: all 2s ease;
+
+    &.show {
+      opacity: 1;
+    }
+
+    &.hide {
+      visibility: hidden;
+    }
+  }
+
+}

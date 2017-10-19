@@ -9,7 +9,7 @@ const extractSass = new ExtractTextPlugin({
 
 module.exports = {
     entry: {
-        app: './index.js',
+        app: './src/index.js',
     },
     output: {
         filename: "index.js",
@@ -17,6 +17,25 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['env']
+                    }
+                }
+            },
+            {
+                test: /\.vue$/,
+                include: [
+                    path.resolve(__dirname, "src")
+                ],
+                use: {
+                    loader: 'vue-loader'
+                }
+            },
             {
                 test: /\.scss$/,
                 use: extractSass.extract({
@@ -31,12 +50,23 @@ module.exports = {
             },
         ]
     },
+    resolve: {
+        alias: {
+            'vue$': 'vue/dist/vue.esm.js'
+        }
+    },
+    devServer: {
+        contentBase: path.join(__dirname, "dist"),
+        host: 'localhost',
+        port: 9000,
+        open: true
+    },
     devtool: 'cheap-source-map',
 
     plugins: [
         extractSass,
         new HtmlWebpackPlugin({
-            template: `./index.html`,
+            template: `./src/index.html`,
             inject: 'body',
             hash: true
         })

@@ -1,0 +1,55 @@
+.project {
+
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+
+  .basic-info-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    z-index: 2;
+    padding: 15px 60px;
+    background: rgba(0, 0, 0, .5);
+
+    .title-container {
+      flex: 1;
+
+      .title {
+        text-transform: uppercase;
+        margin: 0;
+        color: #e8e5e4;
+      }
+
+      .city {
+        font-weight: normal;
+        margin: 0 0 5px;
+      }
+    }
+
+    .show-more {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      span {
+        background-color: #38378d;
+        color: white;
+        font-weight: bold;
+        padding: 15px;
+
+        &:hover {
+          background-color: darken(#38378d, 5%);
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+}
