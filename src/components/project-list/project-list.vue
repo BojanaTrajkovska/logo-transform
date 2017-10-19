@@ -20,7 +20,7 @@
 
 <script>
 
-
+    import * as _ from 'lodash';
     import Project from '../project/project.vue';
 
     export default {
@@ -38,7 +38,7 @@
         },
         methods: {
             onMouseWheel(e) {
-                if( this.currentProjectIndex == this.projects.length -1 ){
+                if( this.currentProjectIndex === this.projects.length -1 ){
                     this.currentProjectIndex = 0;
                 }else {
                     this.currentProjectIndex++;
@@ -46,7 +46,7 @@
             }
         },
         created() {
-            document.addEventListener('mousewheel', this.onMouseWheel)
+            document.addEventListener('mousewheel', _.throttle(this.onMouseWheel, 6000))
         }
 
     }

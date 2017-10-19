@@ -11,8 +11,9 @@
             <div class="show-more" @click="show = true">
                 <span>More</span></div>
         </div>
-
-        <project-info :show="show"></project-info>
+        <transition name="project-info">
+            <project-info v-if="show" @close="show=false"></project-info>
+        </transition>
     </div>
 
 </template>

@@ -48,6 +48,10 @@ module.exports = {
                     fallback: "style-loader"
                 })
             },
+            {
+                test: /\.(ttf|eot|svg|woff2|woff)(\?[\s\S]+)?$/,
+                use: 'file-loader'
+            }
         ]
     },
     resolve: {

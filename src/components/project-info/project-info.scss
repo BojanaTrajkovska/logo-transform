@@ -1,21 +1,31 @@
 .project-info {
 
   padding: 30px;
-  transform: translate3d(0, 100%, 0);
+
   position: absolute;
   top: 0;
   height: 100%;
   background: white;
-  z-index: 5;
-  transition: 2s ease;
+  z-index: 9999999;
   color: black;
-
-  &.show {
-    transform: translateZ(0);
-  }
 
   h1.title{
     font-size:3em;
   }
 
+  .close-action {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 3em;
+    cursor: pointer;
+  }
+}
+
+.project-info-enter-active, .project-info-leave-active {
+  transition: transform 3s;
+  transform: translateY(0);
+}
+.project-info-enter, .project-info-leave-to  {
+  transform: translateY(100%);
 }

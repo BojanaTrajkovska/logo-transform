@@ -1,7 +1,9 @@
 <template>
 
-    <div class="project-info" v-bind:class="{'show': show}" v-if="show">
-
+    <div class="project-info" >
+        <div class="close-action" @click="$emit('close')">
+            <i class="fa fa-close"></i>
+        </div>
         <h1 class="title">The title</h1>
         <h2 class="sub-title">The sub title bla bla</h2>
 
