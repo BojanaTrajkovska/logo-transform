@@ -1,0 +1,28 @@
+
+.threedee {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
+}
+.assembly {
+  animation: spin-circle 12s linear infinite;
+
+}
+
+@keyframes spin-circle {
+  0% {
+    transform:   rotateX(90deg) rotateZ(0deg) rotateY(0deg) ;
+  }
+  60% {
+    transform:  rotateX(90deg) rotateZ(0deg) rotateY(-720deg) ;
+  }
+  90% {
+    transform: rotateX(90deg) rotateZ(90deg) rotateY(-720deg) ;
+  }
+  100% {
+    transform:  rotateX(90deg) rotateZ(90deg) rotateY(-720deg) scale3d(15, 15, 15);
+  }
+}

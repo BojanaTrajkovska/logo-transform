@@ -1,7 +1,7 @@
+@import '../../style/colors.scss';
 $logoItemWidth: 500px;
-body{
-  font-family: 'Inconsolata', monospace;
-}
+
+
 .logo {
   height: 90vh;
   width: 100%;
@@ -26,24 +26,24 @@ body{
       height: 0;
       border-style: solid;
       border-width: 0 ($logoItemWidth/2) ($logoItemWidth/2) ($logoItemWidth/2);
-      border-color: transparent transparent #38378d transparent;
+      border-color: transparent transparent $mainColor transparent;
       margin-bottom: -1px;
     }
     .logo-item-square {
       width: $logoItemWidth;
       height: $logoItemWidth/2;
-      background: #38378d;
+      background: $mainColor;
     }
     .logo-item-wall {
       width: $logoItemWidth;
       height: $logoItemWidth;
-      background: #6d6dc5;
+      background: $mainColor;
       position: absolute;
       bottom: 0;
       left: 0;
       transform-origin: 50% 100%;
       transform: rotateX(-90deg) translateY(100%);
-      box-shadow: inset 0 0 5px 0 #000000;
+  //    box-shadow: inset 0 0 5px 0 #000000;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -55,25 +55,25 @@ body{
         transform-origin: 0 0;
         transform: rotateY(90deg);
         height: $logoItemWidth/2;
-        background: #f2f2f2;
+        background: $sideWallColor;
       }
       &.left-triangle-wall {
         transform-origin: 0 0;
         transform: rotateY(90deg) rotateX(135deg) scale(1, 1.42);
         height: $logoItemWidth/2;
-        background: #f2f2f2;
+        background: $sideWallColor;
       }
       &.right-wall {
         transform-origin: 100% 0;
         transform: rotateY(-90deg);
         height: $logoItemWidth/2;
-        background: #f2f2f2;
+        background: $sideWallColor;
       }
       &.right-triangle-wall {
         transform-origin: 100% 0;
         transform: rotateY(-90deg) rotateX(135deg) scale(1, 1.42);
         height: $logoItemWidth/2;
-        background: #f2f2f2;
+        background: $sideWallColor;
       }
     }
   }
@@ -108,13 +108,13 @@ body{
 
 @keyframes spin {
   0% {
-    transform: rotateY(0deg) rotateZ(0deg) scale3d(0.3, 0.3, 0.3);
+    transform: rotateY(0deg) rotateZ(0deg) scale3d(0.2, 0.2, 0.2);
   }
   60% {
-    transform: rotateY(0deg) rotateZ(720deg) scale3d(0.3, 0.3, 0.3);
+    transform: rotateY(0deg) rotateZ(720deg) scale3d(0.2, 0.2, 0.2);
   }
   90% {
-    transform: rotateY(-90deg) rotateZ(720deg) scale3d(0.3, 0.3, 0.3);
+    transform: rotateY(-90deg) rotateZ(720deg) scale3d(0.2, 0.2, 0.2);
   }
   100% {
     transform: translateX(-60%) rotateY(-90deg) rotateZ(720deg) scale3d(5, 5, 5);

@@ -1,15 +1,11 @@
 <template>
 
-
     <div class="project-container" >
-        <div class="background" style="position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: #f2f2f2;
-    transform: scale(0.7, 1);"></div>
-        <div v-for="( project, key) in projects">
+
+        <navigation></navigation>
+        <div class="background" ></div>
+
+        <div class="the-project" v-for="( project, key) in projects">
             <transition name="fade">
                 <project :project="project" v-if="key==currentProjectIndex"></project>
             </transition>
@@ -22,11 +18,12 @@
 
     import * as _ from 'lodash';
     import Project from '../project/project.vue';
-
+    import Navigation from '../navigation/navigation.vue';
     export default {
 
         components: {
-            Project
+            Project,
+            Navigation
         },
         props: {
             projects: Array
@@ -46,7 +43,7 @@
             }
         },
         created() {
-            document.addEventListener('mousewheel', _.throttle(this.onMouseWheel, 6000))
+            document.addEventListener('wheel', _.throttle(this.onMouseWheel, 6000))
         }
 
     }

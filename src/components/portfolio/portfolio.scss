@@ -1,0 +1,72 @@
+.portfolio {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  background-color: #2c3e50;
+
+  .navigation {
+    .menu-icon {
+      color: #d2bdbd;
+    }
+  }
+
+  > div.project {
+    width: 20%;
+    margin: 0.5%;
+    flex: 20%;
+    position: relative;
+    cursor: pointer;
+
+    .project-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      z-index: 4;
+      cursor: pointer;
+    }
+
+    .project-image {
+      padding-bottom: 100%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border: 2px solid #d2bdbd;
+
+    }
+
+    .text {
+      color: #e0dbdb;
+      font-weight: bold;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      text-align: center;
+      padding-top: 45%;
+      text-transform: uppercase;
+      z-index: 4;
+      opacity: 0;
+      font-size: 1.3em;
+
+    }
+
+    &:hover {
+
+      .project-overlay {
+        opacity: 1;
+      }
+
+      .text {
+        opacity: 1;
+      }
+    }
+
+  }
+}

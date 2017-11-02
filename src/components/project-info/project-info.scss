@@ -1,24 +1,63 @@
+@import '../../style/colors.scss';
 .project-info {
 
   padding: 30px;
-
   position: absolute;
   top: 0;
-  height: 100%;
+  min-height: 100%;
   background: white;
   z-index: 9999999;
   color: black;
 
-  h1.title{
-    font-size:3em;
-  }
 
   .close-action {
     position: absolute;
-    top: 30px;
     right: 30px;
-    font-size: 3em;
+    font-size: 30px;
     cursor: pointer;
+  }
+
+  .project-content {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 18px;
+
+    h1.title {
+      font-size: 3em;
+      color: $mainColor;
+    }
+
+    .sub-title{
+      color: lighten($mainColor, 15);
+      margin-bottom: 50px;
+    }
+
+
+  }
+
+  .project-images{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    .image-container{
+      width: 20%;
+      margin: 0.5%;
+      flex: 20%;
+      position: relative;
+
+      .project-image{
+        padding-bottom: 100%;
+        -webkit-background-size: cover;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border: 2px solid #d2bdbd;
+
+      }
+    }
   }
 }
 

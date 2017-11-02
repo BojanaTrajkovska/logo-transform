@@ -1,5 +1,7 @@
+@import '../../style/colors.scss';
+
 .project-container {
-  opacity: 0;
+ // opacity: 0;
   animation: fadeIn 2s forwards 0s;
 
   position: fixed;
@@ -12,23 +14,26 @@
   display: flex;
   align-items: flex-end;
 
-  > div {
+  > .the-project {
     display: flex;
     align-items: flex-end;
     height: 100%;
     flex: 1;
   }
+
+  .background{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #f2f2f2;
+    transform: scale(0.7, 1);
+  }
 }
 
-.fade-enter-active, .fade-leave-active {
-  //transition: all 3s;
-  //opacity: 1;
-  //transform: scale(1, 1) translateY(0);
-}
 
 .fade-leave-to {
-  //opacity: 0;
-  // transform: scale(0.5, 0.5) translateY(100%);
   z-index: 3;
   animation: project-leave 6s;
 }
@@ -37,11 +42,6 @@
   animation: project-enter 6s;
 }
 
-//.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-//{
-//  opacity: 0;
-//  transform: scale(0.5, 0.5);
-//}
 
 @keyframes project-leave {
 

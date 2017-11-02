@@ -1,11 +1,22 @@
-.slider{
+@import '../../style/colors.scss';
+
+.slider {
+  background-color: $mainColor;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
   .slide {
     position: fixed;
-    top: 0;
-    bottom: 0;
+    top: 50px;
+    bottom: 50px;
     left: 0;
     right: 0;
-    background-size: cover;
+    background-size: 70%;
+    background-repeat: no-repeat;
+
     background-position: center;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -22,6 +33,40 @@
     &.hide {
       visibility: hidden;
     }
+  }
+
+  .slider-arrows {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+
+    &:hover {
+      i {
+        display: block;
+      }
+    }
+
+    i {
+      display: none;
+      color: white;
+      font-size: 80px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+  .slider-next {
+    right: 0;
+  }
+
+  .slider-prev {
+    left: 0;
   }
 
 }
